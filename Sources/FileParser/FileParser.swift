@@ -2,7 +2,7 @@ import Foundation
 
 public struct FileParser {
     
-    public func `init`() {}
+    public init() {}
     
     public func readJSONDataFromFile(_ filePath: String) throws -> Data {
         return try self.readDataFromPath(bundlePath: self.bundlePath(forResource: filePath, ofType: "json"))

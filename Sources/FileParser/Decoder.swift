@@ -9,8 +9,8 @@ import Foundation
 
 public struct Decoder {
     
-    public func `init`() {}
-    
+    public init() {}
+        
     public func decodeObjectFromFile<T: Decodable>(objectType: T.Type, fromFile filePath: String) throws -> T {
         return try self.decodeObjectFromJSONData(objectType: objectType,
                                                  fromData: try FileParser().readJSONDataFromFile(filePath))
